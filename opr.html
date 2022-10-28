@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OPR|REPERSETATION</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            /* display: flexbox; */
+            background-color: black;
+        }
+        h2{
+            color: white;
+        }
+        p{
+            color: white;
+        }
+        #table1{
+            border-collapse: collapse;
+            margin-bottom: 10px;
+            margin: auto;
+            margin-bottom: 6px;
+        }
+        td{
+            border: 2px solid black;
+            padding: 20px;
+            background-color: aqua;
+            font-weight: bold;
+            border-radius: 10px;
+        }
+        #table1 td{
+            padding: 22px;
+        }
+        .vtable{
+            width: fit-content;
+            border-collapse: collapse;
+            float: left;
+            margin-right: 2px;
+            height: fit-content;
+            display: none;
+            /* display: inline; */
+        }
+        #vertical , #vertical1 , #vertical2, #vertical3 ,#vertical4 , #vertical5 ,#vertical6{
+            border-left: 3px solid brown;
+            height: 181px;
+            margin-top: 3px;
+            margin-inline: 26px;
+        }
+        #btn{
+            height: 70px;
+            width: 100%;
+            margin-top: 39px;
+            background-color: darkmagenta;
+            font-weight: bold;
+            border-radius: 10px;
+        }
+        #t1{
+            margin-left: 270px;
+        }
+        
+    </style>
+</head>
+<body>
+    <h2>Example:-></h2>
+    <table id="table1">
+        <tr>
+            <td>9</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>5</td>
+            <td>8</td>
+            <td>5</td>
+            <td>4</td>
+            <td>7</td>
+            <td>8</td>
+            <td>5</td>
+            <td>8</td>
+            <td>7</td>
+            <td>6</td>
+            <td>7</td>
+        </tr>
+    </table>
+    <table class="vtable" id="t1">
+        <tr>
+            <td></td>
+        </tr>
+        <tr>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>9</td>
+        </tr>
+    </table>
+    <table class="vtable" id="t2">
+        <tr>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>9</td>
+    </table>
+    <table class="vtable" id="t3">
+        <tr>
+            <td>6</td>
+        </tr>
+        <tr>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>9</td>
+    </table>
+    <table class="vtable" id="t4">
+        <tr>
+            <td>6</td>
+        </tr>
+        <tr>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>7</td>
+    </table>
+    <div class="vtable" id="vertical"></div>
+    <table class="vtable" id="t5">
+        <tr>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>7</td>
+    </table>
+    <div class="vtable" id="vertical1"></div>
+    <table class="vtable" id="t6">
+        <tr>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td>7</td>
+    </table>
+    <div class="vtable" id="vertical2"></div>
+    <div class="vtable" id="vertical3"></div>
+    <table class="vtable" id="t7">
+        <tr>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>7</td>
+    </table>
+    <div class="vtable" id="vertical4"></div>
+    <div class="vtable" id="vertical5"></div>
+    <table class="vtable" id="t8">
+        <tr>
+            <td>6</td>
+        </tr>
+        <tr>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>7</td>
+    </table>
+    <div class="vtable" id="vertical6"></div>
+    <br>
+    <button id="btn" onclick="show()">RUN</button>
+    <p id="click4" class="vtable">
+        now no empty frame is left insert 7. <br>
+        now which page again required in future? 6, 5 9 <br>
+        5 is it near. and then 6. <br>
+        hence 9 is replaced.
+    </p>
+    <p class="vtable" id="click5">
+        As 5 is already present so no need of page fault.
+    </p>
+    <p class="vtable" id="click6">
+        now no empty frame is left insert 8. <br>
+        now which page again required in future? 6, 5 ,7 <br>
+        5 is it near. and then 7. <br>
+        hence 6 is replaced.
+    </p>
+    <p id="click7" class="vtable">
+        since 5 is already present in memory no need of page fault.
+    </p>
+    <p class="vtable" id="click8">
+        now no empty frame is left insert 4. <br>
+        now which page again required in future? 8, 5 ,7 <br>
+        7 is it near. and then 8. <br>
+        hence 5 is replaced.
+    </p>
+    <p class="vtable" id="click9">
+        As 7 is already present so no need of page fault.
+    </p>
+    <p class="vtable" id="click10">
+        As 8 is already present so no need of page fault.
+    </p>
+    <p class="vtable" id="click11">
+        now which page again required in future? 8, 4 ,7 <br>
+        8 is it near. and then 7. <br>
+        hence 4 is replaced.
+    </p>
+    <p class="vtable" id="click12">
+        As 8 is already present so no need of page fault.
+    </p>
+    <p class="vtable" id="click13">
+        As 7 is already present so no need of page fault.
+    </p>
+    <p class="vtable" id="click14">
+        what we will see in future first out of 8,5,7? <br>
+        hence it is 7. <br>
+        out of 8 and 5 we use <b>FIFO</b> <br>
+        hence 8 is replaced.
+    </p>
+    <p class="vtable" id="click15">
+        As 7 is already present so no need of page fault.
+    </p>
+    <p class="vtable" id="click16"><b>THE NUMBER OF PAGE FAULT = 8</b></p>
+
+    <!--                             java script                                       -->
+
+    <script>
+
+        var cnt=0;
+        function show(){
+            cnt++;
+
+            if(cnt==1){
+                document.getElementById("t1").style.display="block";
+            }
+            else if(cnt==2){
+                document.getElementById("t2").style.display="block";
+            }
+            else if(cnt==3){
+                document.getElementById("t3").style.display="block";
+            }
+            else if(cnt==4){
+                document.getElementById("click4").style.display="block";
+            }
+            else if(cnt==5){
+                document.getElementById("click4").style.display="none";
+                document.getElementById("t4").style.display="block";
+            }
+            else if(cnt==6){
+                document.getElementById("click5").style.display="block";
+            }
+            else if(cnt==7){
+                document.getElementById("click5").style.display="none";
+                document.getElementById("vertical").style.display="block";
+            }
+            else if(cnt==8){
+                document.getElementById("click6").style.display="block";
+            }
+            else if(cnt==9){
+                document.getElementById("t5").style.display="block";
+                document.getElementById("click6").style.display="none";
+            }
+            else if(cnt==10){
+                document.getElementById("click7").style.display="block";
+            }
+            else if(cnt==11){
+                document.getElementById("vertical1").style.display="block";
+                document.getElementById("click7").style.display="none";
+            }
+            else if(cnt==12){
+                document.getElementById("click8").style.display="block";
+            }
+            else if(cnt==13){
+                document.getElementById("t6").style.display="block";
+                document.getElementById("click8").style.display="none";
+            }
+            else if(cnt==14){
+                document.getElementById("click9").style.display="block";
+            }
+            else if(cnt==15){
+                document.getElementById("vertical2").style.display="block";
+                document.getElementById("click9").style.display="none";
+            }
+            else if(cnt==16){
+                document.getElementById("click10").style.display="block";
+            }
+            else if(cnt==17){
+                document.getElementById("vertical3").style.display="block";
+                document.getElementById("click10").style.display="none";
+            }
+            else if(cnt==18){
+                document.getElementById("click11").style.display="block";
+            }
+            else if(cnt==19){
+                document.getElementById("click11").style.display="none";
+                document.getElementById("t7").style.display="block";
+            }
+            else if(cnt==20){
+                document.getElementById("click12").style.display="block";
+            }
+            else if(cnt==21){
+                document.getElementById("vertical4").style.display="block";
+                document.getElementById("click12").style.display="none";
+            }
+            else if(cnt==22){
+                document.getElementById("click13").style.display="block";
+            }
+            else if(cnt==23){
+                document.getElementById("vertical5").style.display="block";
+                document.getElementById("click13").style.display="none";
+            }
+            else if(cnt==24){
+                document.getElementById("click14").style.display="block";
+            }
+            else if(cnt==25){
+                document.getElementById("click14").style.display="none";
+                document.getElementById("t8").style.display="block";
+            }
+            else if(cnt==26){
+                document.getElementById("click15").style.display="block";
+            }
+            else if(cnt==27){
+                document.getElementById("click15").style.display="none";
+                document.getElementById("vertical6").style.display="block";
+            }
+            else if(cnt==28){
+                document.getElementById("click16").style.display="block";
+            }
+            else{
+                window.location.reload();
+            }
+        }
+
+
+    </script>
+    
+</body>
+</html>

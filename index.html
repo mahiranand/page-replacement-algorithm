@@ -1,0 +1,139 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href=
+"https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<script src=
+"https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+	</script>
+	<script src=
+"https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js">
+	</script>
+	<style>
+		body {
+			position: relative;
+            background-color: black;
+		}
+		p {
+			font-size: 18px;
+		}
+		#section1 {
+            border: 2px solid white;
+            margin-top: 80px;
+			padding-top: 50px;
+			height: 500px;
+			color: black;
+			background-color: plum;
+            border-radius: 120px;
+            text-align: center;
+            width: 95%;
+			box-sizing: content-box;
+		}
+		#section2 {
+            border: 2px solid white;
+            margin-top: 30px;
+			padding-top: 50px;
+			height: 500px;
+			color: black;
+			background-color: indianred;
+            border-radius: 120px;
+            text-align: center;
+            width: 95%;
+			box-sizing: content-box;
+		}
+		#section3 {
+            border: 2px solid white;
+            margin-top: 30px;
+			padding-top: 50px;
+			height: 500px;
+			color: white;
+			background-color: royalblue;
+            border-radius: 120px;
+            text-align: center;
+            width: 95%;
+			box-sizing: content-box;
+		}
+        a{
+            text-emphasis-color: black;
+        }
+		
+		
+	</style>
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle"
+					data-toggle="collapse" data-target="#myNavbar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">Page Replacement Algorithms</a>
+			</div>
+			<div>
+				<div class="collapse navbar-collapse" id="myNavbar">
+					<ul class="nav navbar-nav">
+						<li><a href="#section1">FIFO</a></li>
+						<li><a href="#section2">LRU</a></li>
+						<li><a href="#section3">OPR</a></li>
+						
+					</ul>
+				</div>
+			</div>
+		</div>
+	</nav>
+	<div id="section1" class="container">
+		<h1><b>FIFO</b></h1>
+		<h3>This is the simplest page replacement algorithm. In this algorithm, the operating system keeps track of all pages in the memory in a queue, the oldest page is in the front of the queue. When a page needs to be replaced page in the front of the queue is selected for removal. <br><br>
+        <b> Drawback of FIFO:-</b> <br> This technique suffers from Beladays Anomaly. In general, with an increase in the number of frames, the number of page faults decreases. But for some certain scenario, the number of page faults increases with an increase in number of frames. This is called Beladays Anomaly.</h3>
+		
+            <br>
+            <a href="fifo.html" target="_blank"><button type="button" class="btn btn-info">Visual Reprenstation</button></a>
+
+
+	</div>
+	<div id="section2" class="container">
+		<h1><b>LRU</b></h1>
+		
+		<h3>
+            LRU stands for Least Recently Used. The development of the LRU algorithm ended the debate and research that had been going on about page replacement algorithms in the 1960s and 1970s. <br>
+
+
+            LRU replaces the line in the cache that has been in the cache the longest with no reference to it. It works on the idea that the more recently used blocks are more likely to be referenced again. LRU is the most frequently used algorithm as it gives less number of page faults when compared to the other algorithms. <br><br>
+            <b>Drawback of LRU:-</b> <br>
+            There is more overhead as we have to keep track of which pages were referenced. <br>
+ 
+            It is difficult to implement as hardware assistance is required.
+        </h3>
+		<br>
+        <br>
+        <a href="lru.html" target="_blank"><button type="button" class="btn btn-info">Visual Reprenstation</button></a>
+
+	</div>
+	<div id="section3" class="container">
+		<h1><b>OPR</b></h1>
+		<h3>Optimal page replacement is the best page replacement algorithm as this algorithm results in the least number of page faults. In this algorithm, the pages are replaced with the ones that will not be used for the longest duration of time in the future. In simple terms, the pages that will be referred farthest in the future are replaced in this algorithm. <br> <br>
+            <b>Drawback of OPR:-</b> <br> <br>More time consuming. <br>
+            Difficult for error handling. <br>
+            Need future awareness of the programs, which is not possible every time.
+
+        </h3>
+		<br>
+        <br>
+        <a href="opr.html" target="_blank"><button type="button" class="btn btn-info">Visual Reprenstation</button></a>
+
+
+	</div>
+	
+		
+
+
+	</div>
+</body>
+</html>
